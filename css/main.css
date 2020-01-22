@@ -1,10 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .page-container {
     display: grid;
     background-color: rgb(209, 209, 209);
     margin: 0;
-    padding: 0;
+    padding: 0 10vw 0 10vw;
     grid-template-columns: auto;
-    grid-template-rows: auto 40vmax auto auto;
+    grid-template-rows: auto 30vmax auto auto;
     grid-template-areas: 
         "navmenu"
         "banner"
