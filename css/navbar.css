@@ -71,7 +71,7 @@
 
     /* domyślnie schowaj menu */
     #menu {
-        display: block;
+        display: none;
     }
 
     /* napis na całą szerokość */
@@ -81,7 +81,7 @@
 
     /* zamiast menu pokaż przycisk */
     .guzik{
-        display: inline-block;
+        display: block;
     }
 }
 /* ==============
