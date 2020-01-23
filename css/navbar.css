@@ -1,0 +1,78 @@
+.nawig {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4em;
+    background-color: rgba(0, 0, 0, 0.808);
+}
+.napis {
+    float: left;
+}
+
+.menu {
+    float: right;
+}
+/* ==============
+=== FLEX MENU ===
+===============*/
+
+.main-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.main-item {
+    background-color: rgb(83, 83, 83);
+    list-style-type: none;
+    text-align: center;
+    width: 8em; /* stała szerokość elementu */
+    margin: 5px;
+
+    border-radius: 5px;
+}
+
+/* element menu głównego, zmiana koloru tła po najechaniu */
+.main-item:hover, .sub-item:hover {
+    background-color: teal;
+}
+
+/* wyłączenie dekoracji odnośników menu */
+.main-item a, .sub-item a {
+    display: block; /* cały element jest odnośnikiem, nie tylko tekst */
+    color: rgb(206, 206, 206);
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+/* podrzędne menu, ukryte */
+.sub-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+/* podrzędne menu, po najechaniu myszką się pokazuje */
+.main-item:hover > .sub-menu {
+    display: block;
+}
+
+/* element menu podrzędnego */
+.sub-item {
+    background-color: dimgray;
+    text-align: center;
+}
+/* moze rozwijane listy są lepsze?
+@media (max-width: 600px){
+    .nav-menu {
+        position: relative;
+        flex-direction: column;
+    }
+
+}
+/*
