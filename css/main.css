@@ -27,9 +27,15 @@ body {
 }
 
 .footer {
-    background-color: flask;
+    background-color: grey;
     grid-area: stopka;
     text-align: center;
+    flex: 1;
+    padding: 0,75em;
+    margin: 5px;
+    border-radius:5px;
+
+    
 }
 
 /* ==========
@@ -69,4 +75,11 @@ body {
 .art img{
     max-width: 100%;
     border-radius: 5px;
+}
+
+.napis span{
+    font-size: 2em;
+    margin-left: 2em;
+    color: white;
+
 }
