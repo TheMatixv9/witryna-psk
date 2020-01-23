@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0 10vw 0 10vw;
     grid-template-columns: auto;
-    grid-template-rows: 40vmax auto auto;
+    grid-template-rows: 30vmax auto auto;
     grid-template-areas: 
         "banner"
         "tresc"

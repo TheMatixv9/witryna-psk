@@ -9,6 +9,7 @@
   <meta name="description" content="Najpopularniejsze dania kuchnii japońskiej">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <script src="js/main.js"></script>
 </head>
 <body>
   <div class="page-container">
@@ -16,8 +17,13 @@
       <nav class="nawig">
         <div class="napis">
           <span>Kuchnia japońska</span>
+          <div class="guzik" onclick="zmianaPrzycisku(this)">
+            <div class="deska1"></div>
+            <div class="deska2"></div>
+            <div class="deska3"></div>
+          </div>
         </div>
-        <div class="menu">
+        <div id="menu">
           <ul class="main-menu">
             <li class="main-item">
               <a href="kultura.html">Kultura pałeczek</a>
@@ -47,6 +53,7 @@
             </li>
           </ul>
         </div>
+        
       </nav>
     </header>
 
