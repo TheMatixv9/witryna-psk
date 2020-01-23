@@ -1,0 +1,149 @@
+.nawig {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+.napis {
+    float: left;
+    background-color: rgba(0, 0, 0, 0.808);
+    width: 50%;
+}
+
+#menu {
+    float: right;
+    flex-shrink: 0;
+    align-items: right;
+    background-color: rgba(0, 0, 0, 0.808);
+    width: 50%;
+}
+
+/* ==================
+=== Przycisk Menu ===
+================== */
+
+.guzik {
+    float: right;
+    display: none;
+    cursor: pointer;
+    border-color: rgb(196, 196, 196);
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* grafika przycisku */
+.deska1, .deska2, .deska3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(196, 196, 196);
+    margin: 6px 4px 6px 4px;
+    transition: 0.3s;
+}
+
+/* obróć górną belkę przycisku */
+.zmiana .deska1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* ukryj środkową belkę przycisku */
+.zmiana .deska2 {
+    opacity: 0;
+}
+
+/* obróć dolną belkę przycisku */
+.zmiana .deska3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+
+@media (max-width: 900px){
+    /* przenieś nadmierne elementy (menu główne) do następnej linii */
+    .nawig {
+        flex-direction: column;
+    }
+
+    /* domyślnie schowaj menu */
+    #menu {
+        display: none;
+    }
+
+    /* napis na całą szerokość */
+    .napis {
+        width: 100%;
+    }
+
+    /* zamiast menu pokaż przycisk */
+    .guzik{
+        display: block;
+    }
+}
+/* ==============
+=== FLEX MENU ===
+===============*/
+
+.main-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.main-item {
+    background-color: rgb(83, 83, 83);
+    list-style-type: none;
+    text-align: center;
+    width: 8em; /* stała szerokość elementu */
+    margin: 5px;
+
+    border-radius: 5px;
+}
+
+/* element menu głównego, zmiana koloru tła po najechaniu */
+.main-item:hover, .sub-item:hover {
+    background-color: teal;
+}
+
+/* wyłączenie dekoracji odnośników menu */
+.main-item a, .sub-item a {
+    display: block; /* cały element jest odnośnikiem, nie tylko tekst */
+    color: rgb(206, 206, 206);
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+/* podrzędne menu, ukryte */
+.sub-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+/* podrzędne menu, po najechaniu myszką się pokazuje */
+.main-item:hover > .sub-menu {
+    display: block;
+}
+
+/* element menu podrzędnego */
+.sub-item {
+    background-color: dimgray;
+    text-align: center;
+}
+/* moze rozwijane listy są lepsze?
+@media (max-width: 600px){
+    .nav-menu {
+        position: relative;
+        flex-direction: column;
+    }
+
+}
+/*
