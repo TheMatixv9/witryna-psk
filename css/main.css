@@ -1,15 +1,17 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
     background-color: rgb(209, 209, 209);
 }
 
 .page-container {
     display: grid;
     margin: 0;
-    padding: 4em 10vw 0 10vw ;
+    padding: 5em 10vw 0 10vw ;
+    gap: 1em;
     grid-template-columns: auto;
-    grid-template-rows: 30vmax auto auto;
+    grid-template-rows: 25vmax auto auto;
     grid-template-areas: 
         "banner"
         "tresc"
@@ -22,7 +24,6 @@ body {
     background-position: center;
     grid-area: banner;
     border-radius: 5px;
-    margin: 10px 5px 5px 5px;
 }
 
 .footer {
@@ -30,8 +31,7 @@ body {
     grid-area: stopka;
     text-align: center;
     flex: 1;
-    padding: 0,75em;
-    margin: 5px;
+    padding: 0.75em;
     border-radius:5px;
 
     
@@ -48,25 +48,24 @@ body {
 === FLEX TRESC ===
 ===========*/
 
-/* wiersze */
 .main-content {
     grid-area: tresc;
+}
+
+article {
     display: flex;
     flex-direction: column; /* wyrównanie do kolumn */
     align-items: normal;   /* wypełnienie obszaru */
-}
-/* kolumny */
-.blok {
-    display: flex;
-    flex-wrap: wrap;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 1em;
 }
 
-.arts {
-    display: flex;
-    background-color: gray;
-    height: 50vh;
-    margin: 5px;
+section {
+    background-color: rgb(160, 160, 160);
     border-radius: 5px;
+    padding: 0.75em;
+    margin-top: 1em;
 }
 
 .blok div {
