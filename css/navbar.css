@@ -83,7 +83,7 @@
     background-color: rgb(83, 83, 83);
     list-style-type: none;
     text-align: center;
-    width: 9em; /* stała szerokość elementu */
+    min-width: 9em; /* stała szerokość elementu */
     margin: 5px;
 
     border-radius: 5px;
@@ -103,17 +103,15 @@
 }
 
 /* podrzędne menu, ukryte */
-.sub-menu {
+#sub-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: none;
 }
 
-/* podrzędne menu, po najechaniu myszką się pokazuje */
-.main-item:hover > .sub-menu {
-    display: block;
-}
+/* podrzędne menu, po najechaniu myszką się pokazuje*/
+
 
 /* element menu podrzędnego */
 .sub-item {
@@ -152,7 +150,17 @@
     }
 
     .main-item, .sub-item {
+        vertical-align: center;
+        height: 5em;
         width: 100%;
     }
 
+}
+
+/* poprawka dla urządzeń pełnowymiarowych */
+@media (min-width:800px) {
+    /* pokazuje podmenu po najechaniu */
+    .main-item:hover > #sub-menu {
+        display: block;
+    }
 }

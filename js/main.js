@@ -7,3 +7,13 @@ function zmianaPrzycisku(x){
         mojeMenu.style.display = "block"
     }
 }
+
+function submenu(x){
+    x.classList.toggle("sub-menu");
+    var podmenu = document.getElementById("sub-menu");
+    if (podmenu.style.display === "block") {
+        podmenu.style.display = "none";
+    } else {
+        podmenu.style.display = "block";
+    }
+}
