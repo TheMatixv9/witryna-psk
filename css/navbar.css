@@ -66,31 +66,6 @@
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
-
-
-@media (max-width: 900px){
-    /* przenieś nadmierne elementy (menu główne) do następnej linii */
-    .nawig {
-        flex-direction: column;
-    }
-
-    /* domyślnie schowaj menu */
-    #menu {
-        display: none;
-    }
-
-    /* napis na całą szerokość */
-    .napis {
-        width: 100%;
-        margin-left: -1em;
-        text-align: center;
-    }
-
-    /* zamiast menu pokaż przycisk */
-    .guzik{
-        display: block;
-    }
-}
 /* ==============
 === FLEX MENU ===
 ===============*/
@@ -108,7 +83,7 @@
     background-color: rgb(83, 83, 83);
     list-style-type: none;
     text-align: center;
-    width: 8em; /* stała szerokość elementu */
+    width: 9em; /* stała szerokość elementu */
     margin: 5px;
 
     border-radius: 5px;
@@ -145,12 +120,39 @@
     background-color: dimgray;
     text-align: center;
 }
-/* moze rozwijane listy są lepsze?
-@media (max-width: 600px){
-    .nav-menu {
-        position: relative;
+
+/* menu na komórki i tablety */
+@media (max-width: 800px){
+    /* zamiast menu pokaż przycisk */
+    .guzik{
+        display: block;
+    }
+    
+    /* przenieś nadmierne elementy (menu główne) do następnej linii */
+    .nawig {
         flex-direction: column;
     }
 
+    /* domyślnie schowaj menu */
+    #menu {
+        display: none;
+        width: 100%;
+    }
+
+    /* napis na całą szerokość */
+    .napis {
+        width: 100%;
+        margin-left: -1em;
+        text-align: center;
+    }
+
+    /* elementy menu głównego jako lista */
+    .main-menu {
+        flex-direction: column;
+    }
+
+    .main-item, .sub-item {
+        width: 100%;
+    }
+
 }
-/*
