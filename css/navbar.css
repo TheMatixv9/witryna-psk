@@ -5,9 +5,13 @@
     right: 0;
     left: 0;
     width: 100%;
+    height: 4em;
+    padding: 0;
+    margin: 0;
 }
 .napis {
     float: left;
+    padding: 0.5em;
     background-color: rgba(0, 0, 0, 0.808);
     width: 50%;
 }
@@ -32,12 +36,13 @@
     border-style: solid;
     border-width: 4px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 0;
+    
 }
 
 /* grafika przycisku */
 .deska1, .deska2, .deska3 {
-    width: 35px;
+    width: 30px;
     height: 5px;
     background-color: rgb(196, 196, 196);
     margin: 6px 4px 6px 4px;
@@ -77,6 +82,8 @@
     /* napis na całą szerokość */
     .napis {
         width: 100%;
+        margin-left: -1em;
+        text-align: center;
     }
 
     /* zamiast menu pokaż przycisk */
@@ -94,7 +101,7 @@
     align-items: flex-start;
     list-style-type: none;
     margin: 0;
-    padding: 10px;
+    padding: 0.5em;
 }
 
 .main-item {
