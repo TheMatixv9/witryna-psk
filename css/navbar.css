@@ -150,9 +150,11 @@
     }
 
     .main-item, .sub-item {
-        vertical-align: center;
-        height: 5em;
         width: 100%;
+    }
+
+    .main-item a, .sub-item a {   
+        padding: 1em;
     }
 
 }
